@@ -14,10 +14,6 @@ let newsURL = "https://api.fantasynerds.com/v1/nfl/news?apikey=TEST"
 
 console.log(newsURL)
 
-let playersURL = "https://api.fantasynerds.com/v1/nfl/players?apikey=TEST&include_inactive="
-
-console.log(playersURL)
-
 /// Declaring Variables
 
 const $form = $('form')
@@ -27,10 +23,17 @@ const $input = $('input')
 /// Caching Using jQuery
 
 
-
 $form.on("submit", getHandleData)
 
 function getHandleData (event) {
-    event.preventDefault()
-    console.log($input.val())
+
+    let userInput = $input.val();
+
+    event.preventDefault();
+
+    console.log($input.val());
+
+    $.ajax(rankingURL).then(function(data){
+        console.log(data)
+    })
 }

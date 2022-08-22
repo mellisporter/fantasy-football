@@ -19,3 +19,12 @@ body {
 .right {
     grid-column: 3/3;
 }
+
+nav, footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav {
+    margin: auto;
+}
