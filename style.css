@@ -60,3 +60,8 @@ footer {
     margin: 10px;
     background-color: whitesmoke;
 }
+
+div {
+    margin: 10px;
+    padding: 5px;
+}

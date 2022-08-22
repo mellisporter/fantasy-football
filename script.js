@@ -42,5 +42,6 @@ const $input = $('input')
 // trying to call data
 
 $.ajax(newsURL).then(function(data){
-    console.log(data)
+    console.log(data[0][0])
+
 })
