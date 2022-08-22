@@ -17,9 +17,11 @@ console.log(newsURL)
 /// Declaring Variables
 
 const $form = $('form')
-const $input = $('input')
-
-
+const $input = $('input[type="text"]')
+const $name = $('#name')
+const $position = $('#position')
+const $team = $('#team')
+const $adp = $('#adp')
 /// Caching Using jQuery
 
 
@@ -41,7 +43,23 @@ const $input = $('input')
 
 // trying to call data
 
-$.ajax(newsURL).then(function(data){
-    console.log(data[0][0])
+$form.on("submit", handleGetData) 
+    function handleGetData (event) {
+        if ($input === "") return;
+        event.preventDefault();
+        $.ajax(rankingURL).then(function(data){
+            console.log(data.players[1].name)
+            $name.text($input.val())
+            $position.text("Running Back")
+            $team.text("Minnesota Vikings")
+            $adp.text('1.02')
+              })
+    }
+    
 
-})
+
+
+
+    // console.log(data[0])
+    // console.log(data[0].article_excerpt)
+    // console.log()
