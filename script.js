@@ -23,17 +23,24 @@ const $input = $('input')
 /// Caching Using jQuery
 
 
-$form.on("submit", getHandleData)
+// $form.on("submit", getHandleData)
 
-function getHandleData (event) {
+// function getHandleData (event) {
 
-    let userInput = $input.val();
+//     let userInput = $input.val();
 
-    event.preventDefault();
+//     event.preventDefault();
 
-    console.log($input.val());
+//     console.log($input.val());
 
-    $.ajax(rankingURL).then(function(data){
-        console.log(data)
-    })
-}
+//     $.ajax(rankingURL).then(function(data){
+//         console.log(data)
+//     })
+// }
+
+
+// trying to call data
+
+$.ajax(newsURL).then(function(data){
+    console.log(data)
+})
