@@ -18,8 +18,15 @@ let playersURL = "https://api.fantasynerds.com/v1/nfl/players?apikey=TEST&includ
 
 console.log(playersURL)
 
+/// Declaring Variables
+
 const $form = $('form')
 const $input = $('input')
+
+
+/// Caching Using jQuery
+
+
 
 $form.on("submit", getHandleData)
 
