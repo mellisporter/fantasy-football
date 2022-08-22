@@ -1,7 +1,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 1fr 30px;
+    grid-template-rows: 50px 1fr 40px;
     height: 100%;
     
 }
@@ -10,8 +10,9 @@ body {
 
 nav {
     grid-column: 1/4;
-    background-color: aquamarine;
+    background-color: #0B4F6C;
     width: 100%
+
 }
 .left {
     grid-column: 1/1;
@@ -35,12 +36,17 @@ nav, footer {
 
 .nav {
     margin: auto;
+    color: azure;
+}
+
+.foot {
+    color: azure;
 }
 
 footer {
     grid-row: 3/3;
     grid-column: 1/4;
-    background-color: brown;
+    background-color: #F72C25;
 }
 
 .news-card {
@@ -48,5 +54,5 @@ footer {
     height: 200px;
     width: 400px;
     margin: 10px;
-    background-color: blue;
+    background-color: whitesmoke;
 }
