@@ -6,15 +6,11 @@ let rankingURL = "https://api.fantasynerds.com/v1/nfl/draft-rankings?apikey=TEST
 
 console.log(rankingURL)
 
-let adpURL = "https://api.fantasynerds.com/v1/nfl/adp?apikey=TEST=&format="
-
-console.log(adpURL)
-
 let newsURL = "https://api.fantasynerds.com/v1/nfl/news?apikey=TEST"
 
 console.log(newsURL)
 
-/// Declaring Variables
+/// Declaring Variables using jQuery
 
 const $form = $('form')
 const $input = $('input[type="text"]')
@@ -22,54 +18,32 @@ const $name = $('#name')
 const $position = $('#position')
 const $team = $('#team')
 const $adp = $('#adp')
-/// Caching Using jQuery
 
-
-// $form.on("submit", getHandleData)
-
-// function getHandleData (event) {
-
-//     let userInput = $input.val();
-
-//     event.preventDefault();
-
-//     console.log($input.val());
-
-//     $.ajax(rankingURL).then(function(data){
-//         console.log(data)
-//     })
-// }
-
-
-// trying to call data
+// event listener to call data when the user clicks the submit button
 
 $form.on("submit", handleGetData) 
+// this function will get our API data
     function handleGetData (event) {
+       // an empty string will not be read as a searchable input
         if ($input === "") return;
+        // we need to prevent default so our page doesn't refresh on submit
         event.preventDefault();
+
+        // now, we have our ajax request to get our data 
         $.ajax(rankingURL).then(function(data){
+            // working with out API's players array, we need to use the find method to allow a user to search 
+            // and create a new array of data based on the player they searched
             let playerData = data.players.find(function (player) {
+                // we want the user's input to be a player name, so therefore we need to find the
+                // name of the player in our array
                 return player.name === $input.val()
             })
-            console.log(playerData)
-            // console.log(playerData.name)
+          // now that we have a function creating our new array "playerData," we can change the text
+          // of our HTML elements to match the new array's data
             $name.text(playerData.name)
             $position.text(playerData.position)
             $team.text(playerData.team)
             $adp.text(playerData.rank)
               })
     }
-    
-// testing find method
-
-// let userPlayer = rankingURL.find(function (player){
-// return player.name === $input.val()
-
-// })
-
-// console.log(userPlayer)
-
-    // console.log(data[0])
-    // console.log(data[0].article_excerpt)
-    // console.log()
 
