@@ -48,18 +48,28 @@ $form.on("submit", handleGetData)
         if ($input === "") return;
         event.preventDefault();
         $.ajax(rankingURL).then(function(data){
-            console.log(data.players[1].name)
-            $name.text($input.val())
-            $position.text("Running Back")
-            $team.text("Minnesota Vikings")
-            $adp.text('1.02')
+            let playerData = data.players.find(function (player) {
+                return player.name === $input.val()
+            })
+            console.log(playerData)
+            // console.log(playerData.name)
+            $name.text(playerData.name)
+            $position.text(playerData.position)
+            $team.text(playerData.team)
+            $adp.text(playerData.rank)
               })
     }
     
+// testing find method
 
+// let userPlayer = rankingURL.find(function (player){
+// return player.name === $input.val()
 
+// })
 
+// console.log(userPlayer)
 
     // console.log(data[0])
     // console.log(data[0].article_excerpt)
     // console.log()
+
