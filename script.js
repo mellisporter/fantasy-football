@@ -6,9 +6,11 @@ let rankingURL = "https://api.fantasynerds.com/v1/nfl/draft-rankings?apikey=W2ND
 
 console.log(rankingURL)
 
-let newsURL = "https://api.fantasynerds.com/v1/nfl/news?apikey=TEST"
+let newsURL = "https://api.fantasynerds.com/v1/nfl/news?apikey=W2NDYSDSQVPWSVZMVB4B"
 
 console.log(newsURL)
+
+let statsURL = "https://api.fantasynerds.com/v1/nfl/ros?apikey=W2NDYSDSQVPWSVZMVB4B"
 
 /// Declaring Variables using jQuery
 
@@ -47,17 +49,49 @@ $form.on("submit", handleGetData)
             $team.text(playerData.team)
             $adp.text("Pick Number: " + playerData.rank)
             $positionRank.text(playerData.position + " #" + playerData.rank_position)
-            getNews()
+            getStats()
               })
     }
 
-        function getNews() {
-        $.ajax(newsURL).then(function(newsArticle) {
-            console.log(newsArticle)
-            let playerNews = newsArticle.find(function (news){
-                return news.article_headline.includes("$input")
+    // creating a function to let stats appear on the screen
+    // i am using a similar method to the handleGetData function, but since there are
+    // different positions, I will be needing JS to check which position the player is 
+    // based on the user input
+
+        function getStats() {
+        $.ajax(statsURL).then(function (data){
+            let qbStats = data.projections.QB.find(function (player){
+                return player.name === $input.val()
             })
-            console.log(playerNews)
+            let rbStats = data.projections.RB.find(function (player){
+                return player.name === $input.val()
+            })
+            let wrStats = data.projections.WR.find(function (player){
+                return player.name === $input.val()
+            })
+            let teStats = data.projections.TE.find(function (player){
+                return player.name === $input.val()
+            })
+            
+
+            if (qbStats) {
+                console.log(qbStats)
+                console.log('this player is a qb')
+            } else if (rbStats) {
+                console.log(rbStats)
+                console.log('this player is an rb')
+            } else if (teStats) {
+                console.log(teStats)
+                console.log('this player is a te')
+            } else {
+                console.log(wrStats)
+                console.log('this player is a WR')
+            }
+            renderStats()
         })
+        }
+
+        function renderStats() {
+            
         }
 
