@@ -18,6 +18,7 @@ const $name = $('#name')
 const $position = $('#position')
 const $team = $('#team')
 const $adp = $('#adp')
+const $positionRank = $('#position-rank')
 
 // event listener to call data when the user clicks the submit button
 
@@ -40,10 +41,12 @@ $form.on("submit", handleGetData)
             })
           // now that we have a function creating our new array "playerData," we can change the text
           // of our HTML elements to match the new array's data
+          // console.log(playerData)
             $name.text(playerData.name)
             $position.text(playerData.position)
             $team.text(playerData.team)
-            $adp.text(playerData.rank)
+            $adp.text("Pick Number: " + playerData.rank)
+            $positionRank.text(playerData.position + " #" + playerData.rank_position)
               })
     }
 
