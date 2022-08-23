@@ -2,7 +2,7 @@
 
 // Finding the API endpoints that I need for this project
 
-let rankingURL = "https://api.fantasynerds.com/v1/nfl/draft-rankings?apikey=TEST&format="
+let rankingURL = "https://api.fantasynerds.com/v1/nfl/draft-rankings?apikey=W2NDYSDSQVPWSVZMVB4B&format="
 
 console.log(rankingURL)
 
@@ -41,12 +41,23 @@ $form.on("submit", handleGetData)
             })
           // now that we have a function creating our new array "playerData," we can change the text
           // of our HTML elements to match the new array's data
-          // console.log(playerData)
+          console.log(playerData)
             $name.text(playerData.name)
             $position.text(playerData.position)
             $team.text(playerData.team)
             $adp.text("Pick Number: " + playerData.rank)
             $positionRank.text(playerData.position + " #" + playerData.rank_position)
+            getNews()
               })
     }
+
+        function getNews() {
+        $.ajax(newsURL).then(function(newsArticle) {
+            console.log(newsArticle)
+            let playerNews = newsArticle.find(function (news){
+                return news.article_headline.includes("$input")
+            })
+            console.log(playerNews)
+        })
+        }
 
