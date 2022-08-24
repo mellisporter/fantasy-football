@@ -43,7 +43,6 @@ $form.on("submit", handleGetData)
         if ($input === "") return;
         // we need to prevent default so our page doesn't refresh on submit
         event.preventDefault();
-
         // now, we have our ajax request to get our data 
         $.ajax(rankingURL).then(function(data){
             // working with out API's players array, we need to use the find method to allow a user to search 
@@ -62,6 +61,8 @@ $form.on("submit", handleGetData)
             $adp.text("Pick Number: " + playerData.rank)
             $positionRank.text(playerData.position + " #" + playerData.rank_position)
             getStats()
+            // clears user input from the search bar
+            $input.val("")
               })
     }
 
