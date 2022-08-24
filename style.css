@@ -41,11 +41,12 @@ nav, footer {
 .nav {
     margin: auto;
     color: azure;
-    position: sticky;
+    font-size: 20px;
 }
 
 .foot {
     color: azure;
+    margin: 5px;
 
 }
 
@@ -53,6 +54,7 @@ footer {
     grid-row: 3/3;
     grid-column: 1/4;
     background-color: #F72C25;
+    text-align: center;
 }
 
 .stat-card {

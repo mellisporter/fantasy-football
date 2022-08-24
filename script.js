@@ -61,8 +61,7 @@ $form.on("submit", handleGetData)
             $adp.text("Pick Number: " + playerData.rank)
             $positionRank.text(playerData.position + " #" + playerData.rank_position)
             getStats()
-            // clears user input from the search bar
-            $input.val("")
+
               })
     }
 
