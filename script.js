@@ -24,14 +24,15 @@ const $positionRank = $('#position-rank')
 
 // variables for stats specifically
 
-const $head1 = $(".head1")
 const $stat1 = $(".stat1")
-const $head2 = $(".head2")
 const $stat2 = $(".stat2")
-const $head3 = $(".head3")
 const $stat3 = $(".stat3")
-const $head4 = $(".head4")
 const $stat4 = $(".stat4")
+const $stat5 = $(".stat5")
+const $stat6 = $(".stat6")
+const $stat7 = $(".stat7")
+const $stat8 = $(".stat8")
+
 
 // event listener to call data when the user clicks the submit button
 
@@ -88,7 +89,15 @@ $form.on("submit", handleGetData)
             if (qbStats) {
                 console.log(qbStats)
                 console.log(qbStats.passing_attempts)
-                $head1.text(`Passing Attempts: ${qbStats.passing_attempts}`)
+                $stat1.text(`Passing Completions: ${qbStats.passing_completions}`)
+                $stat2.text(`Passing Attempts: ${qbStats.passing_attempts}`)
+                $stat3.text(`Passing Yards: ${qbStats.passing_yards}`)
+                $stat4.text(`Passing Touchdowns: ${qbStats.passing_touchdowns}`)
+                $stat5.text(`Interceptions: ${qbStats.passing_interceptions}`)
+                $stat6.text(`Rushing Yards: ${qbStats.rushing_yards}`)
+                $stat7.text(`Rushing Touchdowns: ${qbStats.rushing_touchdowns}`)
+                $stat8.text(`Fantasy Points: ${qbStats.proj_pts}`)
+
                 // console.log('this player is a qb')
             } else if (rbStats) {
                 console.log(rbStats)
