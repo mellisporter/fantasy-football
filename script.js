@@ -22,6 +22,17 @@ const $team = $('#team')
 const $adp = $('#adp')
 const $positionRank = $('#position-rank')
 
+// variables for stats specifically
+
+const $head1 = $(".head1")
+const $stat1 = $(".stat1")
+const $head2 = $(".head2")
+const $stat2 = $(".stat2")
+const $head3 = $(".head3")
+const $stat3 = $(".stat3")
+const $head4 = $(".head4")
+const $stat4 = $(".stat4")
+
 // event listener to call data when the user clicks the submit button
 
 $form.on("submit", handleGetData) 
@@ -76,7 +87,9 @@ $form.on("submit", handleGetData)
 
             if (qbStats) {
                 console.log(qbStats)
-                console.log('this player is a qb')
+                console.log(qbStats.passing_attempts)
+                $head1.text(`Passing Attempts: ${qbStats.passing_attempts}`)
+                // console.log('this player is a qb')
             } else if (rbStats) {
                 console.log(rbStats)
                 console.log('this player is an rb')
@@ -87,11 +100,5 @@ $form.on("submit", handleGetData)
                 console.log(wrStats)
                 console.log('this player is a WR')
             }
-            renderStats()
         })
         }
-
-        function renderStats() {
-            
-        }
-

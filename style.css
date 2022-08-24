@@ -53,7 +53,7 @@ footer {
     background-color: #F72C25;
 }
 
-.news-card {
+.stat-card {
     flex-direction: column;
     height: 200px;
     width: 400px;
