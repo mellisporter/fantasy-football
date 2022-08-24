@@ -87,8 +87,6 @@ $form.on("submit", handleGetData)
             
 
             if (qbStats) {
-                console.log(qbStats)
-                console.log(qbStats.passing_attempts)
                 $stat1.text(`Passing Completions: ${qbStats.passing_completions}`)
                 $stat2.text(`Passing Attempts: ${qbStats.passing_attempts}`)
                 $stat3.text(`Passing Yards: ${qbStats.passing_yards}`)
@@ -101,7 +99,16 @@ $form.on("submit", handleGetData)
                 // console.log('this player is a qb')
             } else if (rbStats) {
                 console.log(rbStats)
-                console.log('this player is an rb')
+                $stat1.text(`Rushing Attempts: ${rbStats.rushing_attempts}`)
+                $stat2.text(`Rushing Yards: ${rbStats.rushing_yards}`)
+                $stat3.text(`Rushing Touchdowns: ${rbStats.rushing_touchdowns}`)
+                $stat4.text(`Fumbles: ${rbStats.fumbles}`)
+                $stat5.text(`Receptions: ${rbStats.receptions}`)
+                $stat6.text(`Receiving Yards: ${rbStats.receiving_yards}`)
+                $stat7.text(`Reveiving Touchdowns: ${rbStats.receiving_touchdowns}`)
+                $stat8.text(`Fantasy Points: ${rbStats.proj_pts}`)
+
+                // console.log('this player is an rb')
             } else if (teStats) {
                 console.log(teStats)
                 console.log('this player is a te')

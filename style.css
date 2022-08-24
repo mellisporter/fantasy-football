@@ -7,7 +7,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 1fr 40px;
     height: 100%;
-    
+    /* background-image: url("https://images.pexels.com/photos/2570139/pexels-photo-2570139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") */
 }
 
 /* Now that we have set up our information in a flexgrid, we need to define which divs will go where on the page */
@@ -55,7 +55,7 @@ footer {
 
 .stat-card {
     flex-direction: column;
-    height: 200px;
+    height: 225px;
     width: 400px;
     margin: 10px;
     background-color: whitesmoke;
