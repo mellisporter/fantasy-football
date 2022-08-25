@@ -7,6 +7,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 1fr 40px;
     height: 100%;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("https://images.pexels.com/photos/2570139/pexels-photo-2570139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     /* background-image: url("https://images.pexels.com/photos/2570139/pexels-photo-2570139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") */
 }
 
