@@ -104,12 +104,17 @@ p {
     cursor: pointer;
 }
 
+#bengal {
+    height: 30px;
+    cursor: pointer;
+}
+
 :root{
    --primary-color: white;
    --secondary-color: #212121; 
 }
 
 .bolt-theme {
-     --primary-color: rgb(3, 213, 241);
-    --secondary-color: white;
+     --primary-color: #2280c5;
+    --secondary-color: #fbc210;
 }
