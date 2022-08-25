@@ -142,3 +142,8 @@ $form.on("submit", handleGetData)
             document.body.classList.toggle("bolt-theme");
         })
 
+        var bengal = document.getElementById('bengal');
+
+        bengal.addEventListener("click" , function (evt){
+            document.body.classList.toggle("bengal-theme");
+        })
