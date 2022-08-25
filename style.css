@@ -46,7 +46,7 @@ nav {
 }
 
 .nav {
-    color: azure;
+    color: white;
     font-size: 20px;
     width: 100%;
 }
@@ -119,7 +119,7 @@ p {
 .bolt-theme {
      --primary-color: #2280c5;
     --secondary-color: #fbc210;
-    --nav-color: #2280c5;
+    --nav-color: #fbc210;
     --foot-color: #fbc210;
 
 }
