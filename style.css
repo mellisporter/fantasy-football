@@ -7,8 +7,10 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 1fr 40px;
     height: 100%;
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("https://images.pexels.com/photos/2570139/pexels-photo-2570139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-    /* background-image: url("https://images.pexels.com/photos/2570139/pexels-photo-2570139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") */
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255,255,255,.5)),url(./pexels-jeandaniel-francoeur-2570139\ \(1\).jpg);
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Now that we have set up our information in a flexgrid, we need to define which divs will go where on the page */
@@ -16,8 +18,11 @@ body {
 nav {
     grid-column: 1/4;
     background-color: #0B4F6C;
-    width: 100%
+    width: 100%;
+}
 
+nav:hover {
+    height: 100px;
 }
 .left {
     grid-column: 1/1;
@@ -32,6 +37,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
+    font-size: larger;
 }
 
 nav, footer {
@@ -60,8 +66,8 @@ footer {
 
 .stat-card {
     flex-direction: column;
-    height: 225px;
-    width: 400px;
+    height: 100%;
+    width: auto;
     margin: 10px;
     background-color: whitesmoke;
 }
@@ -71,11 +77,19 @@ div {
     padding: 5px;
 }
 
+body > div {
+    background-color: white;
+}
+
+nav > div {
+    cursor:pointer;
+}
+
 p {
     font-family: 'Arimo', sans-serif;
 
 }
 
 .disclaimer {
-    font-size:small
+    font-size: small
 }
