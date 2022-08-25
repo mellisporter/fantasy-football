@@ -16,17 +16,13 @@ With FFF, you can search for any active offensive player in the NFL and view the
 
 ## Technologies Used
 
--HTML <br>
--CSS <br>
--JavaScript <br>
--jQuery <br>
--BootStrap <br>
+HTML | CSS | JavaScript | jQuery | BootStrap 
 
 ## Features
 
--Users can type in a player's name and receive their basic fantasy info (team, position, fantasy ranking, positional ranking) <br>
--Users can see weighted statistical projections when searching, with results changing based on player position <br>
--Users can change the theme of the website to match their favorite NFL team (version 1.0 currently supports the Chargers, Bengals, and Falcons-- more on the way!) <br>
+* Users can type in a player's name and receive their basic fantasy info (team, position, fantasy ranking, positional ranking) 
+* Users can see weighted statistical projections when searching, with results changing based on player position
+* Users can change the theme of the website to match their favorite NFL team (version 1.0 currently supports the Chargers, Bengals, and Falcons-- more on the way!) 
 
 ## Whiteboard Design
 
@@ -43,6 +39,20 @@ Product Management was done with Trello.
 
 Website was designed with HTML5 and CSS3. Bootstrap was added for site responsiveness.
 
+## Upcoming Features
+
+Currently working on adding the following features to FFF:
+
+* Users will be able to compare players
+
+* Users will be able to see player pictures with the info
+
+* Users will be able to "flip a coin" to decide who to draft if they are stuck
+
+* More custom themes will be available for users
+
+* Users will not be locked into case sensitivity when searching for a player
+
 ## Deployed Link
 
 [-GitHub Pages](https://mellisporter.github.io/fantasy-football/)
@@ -50,7 +60,7 @@ Reminder: FFF does not support CORS at this time. A browser extension will be ne
 
 ## Credits
 
-Thank you to my team lead Sami Dennis for the guidance over the course of this project. Thank you to [Ryan Shipley](https://github.com/ryanshipley), [Calin Petrut](https://github.com/Calinpet), and [Jaden Garrity](https://github.com/MrTowelGuy) for being a great support system during project week. Check out their projects on their GitHub pages.
+Thank you to my team lead Sami Denis for the guidance over the course of this project. Thank you to [Ryan Shipley](https://github.com/ryanshipley), [Calin Petrut](https://github.com/Calinpet), and [Jaden Garrity](https://github.com/MrTowelGuy) for being a great support system during project week. Check out their projects on their GitHub pages.
 
 ## About the Developer
 
