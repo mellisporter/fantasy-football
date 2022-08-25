@@ -99,12 +99,7 @@ p {
     font-size: small
 }
 
-#bolt {
-    height: 30px;
-    cursor: pointer;
-}
-
-#bengal {
+#bolt, #bengal, #falcon {
     height: 30px;
     cursor: pointer;
 }
@@ -128,5 +123,12 @@ p {
     --primary-color: orange;
     --secondary-color: black;
     --nav-color:black;
+    --foot-color: black;
+}
+
+.falcons-theme {
+    --primary-color: black;
+    --secondary-color: red;
+    --nav-color: black;
     --foot-color: black;
 }

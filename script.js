@@ -138,7 +138,6 @@ $form.on("submit", handleGetData)
         var bolt = document.getElementById('bolt');
 
         bolt.addEventListener("click" , function(evt){
-            console.log('this works');
             document.body.classList.toggle("bolt-theme");
         })
 
@@ -146,4 +145,10 @@ $form.on("submit", handleGetData)
 
         bengal.addEventListener("click" , function (evt){
             document.body.classList.toggle("bengal-theme");
+        })
+
+        var falcon = document.getElementById('falcon');
+
+        falcon.addEventListener("click" , function(evt){
+            document.body.classList.toggle("falcons-theme")
         })
