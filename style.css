@@ -107,7 +107,9 @@ p {
 :root{
    --primary-color: white;
    --secondary-color: #212121; 
-    /* --primary-color: rgb(3, 213, 241);
-    --secondary-color: white; */
+}
 
+.bolt-theme {
+     --primary-color: rgb(3, 213, 241);
+    --secondary-color: white;
 }
