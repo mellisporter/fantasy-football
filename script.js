@@ -2,15 +2,15 @@
 
 // Finding the API endpoints that I need for this project
 
-let rankingURL = "https://api.fantasynerds.com/v1/nfl/draft-rankings?apikey=W2NDYSDSQVPWSVZMVB4B&format="
+let rankingURL = "https://api.fantasynerds.com/v1/nfl/draft-rankings?apikey=TEST&format="
 
 console.log(rankingURL)
 
-let newsURL = "https://api.fantasynerds.com/v1/nfl/news?apikey=W2NDYSDSQVPWSVZMVB4B"
+let newsURL = "https://api.fantasynerds.com/v1/nfl/news?apikey=TEST"
 
 console.log(newsURL)
 
-let statsURL = "https://api.fantasynerds.com/v1/nfl/ros?apikey=W2NDYSDSQVPWSVZMVB4B"
+let statsURL = "https://api.fantasynerds.com/v1/nfl/ros?apikey=TEST"
 
 /// Declaring Variables using jQuery
 
