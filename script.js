@@ -135,4 +135,10 @@ $form.on("submit", handleGetData)
         })
         }
 
+        const bolt = document.getElementById("#bolt");
+
+        bolt.onclick = function() {
+            console.log('this works')
+            document.body.classList.toggle("bolt-theme");
+        }
 

@@ -8,7 +8,7 @@ body {
     grid-template-rows: 50px 1fr 40px;
     height: 100%;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255,255,255,.5)),url("https://images.pexels.com/photos/2570139/pexels-photo-2570139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-color: black;
+    background-color: var(--secondary-color);
     background-size: cover;
     background-repeat: no-repeat;
     align-content: center;
@@ -72,7 +72,7 @@ footer {
     height: 100%;
     width: auto;
     margin: 10px;
-    background-color: whitesmoke;
+    
 }
 
 div {
@@ -81,11 +81,13 @@ div {
 }
 
 body > div {
-    background-color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 nav > div {
-    cursor:pointer;
+    flex: 1;
+    text-align: right;
 }
 
 p {
@@ -95,4 +97,17 @@ p {
 
 .disclaimer {
     font-size: small
+}
+
+#bolt {
+    height: 30px;
+    cursor: pointer;
+}
+
+:root{
+   --primary-color: white;
+   --secondary-color: #212121; 
+    /* --primary-color: rgb(3, 213, 241);
+    --secondary-color: white; */
+
 }
