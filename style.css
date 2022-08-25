@@ -19,11 +19,14 @@ nav {
     grid-column: 1/4;
     background-color: #0B4F6C;
     width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
-nav:hover {
+/* nav:hover {
     height: 100px;
-}
+} */
+
 .left {
     grid-column: 1/1;
 }
@@ -40,28 +43,26 @@ nav:hover {
     font-size: larger;
 }
 
-nav, footer {
-    display: flex;
-    flex-direction: row;
-}
-
 .nav {
-    margin: auto;
     color: azure;
     font-size: 20px;
+    width: 100%;
 }
 
 .foot {
-    color: azure;
+    color: white;
     margin: 5px;
+    
 
 }
 
 footer {
+    display: flexbox;
     grid-row: 3/3;
-    grid-column: 1/4;
+    width: 100%;
     background-color: #F72C25;
     text-align: center;
+    position: absolute; bottom: 0;
 }
 
 .stat-card {
